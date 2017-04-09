@@ -1,0 +1,3227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>chord_chart</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- Custom stylesheet, it must be in the same directory as the html file -->
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- Loading mathjax macro -->
+    <!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true, processEnvironments: true }, // Center justify equations in code and markdown cells. Elsewhere // we use CSS to
+        left justify single line equations in code cells. displayAlign: 'center', "HTML-CSS": { styles: {'.MathJax_Display': {"margin": 0}}, linebreaks: { automatic: true } } });
+    </script>
+    <!-- End of mathjax configuration -->
+</head>
+
+<body>
+
+    <div class="output_html rendered_html output_subarea ">
+        <script>
+            requirejs.config({
+                paths: {
+                    'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+                },
+            });
+            if (!window.Plotly) {
+                {
+                    require(['plotly'], function(plotly) {
+                        window.Plotly = plotly;
+                    });
+                }
+            }
+        </script>
+    </div>
+
+
+
+    <center>
+          <div id="f986e606-c92d-4e45-b3a7-830652322ea4" style="height: 600px; width: 600px;" class="plotly-graph-div"></div>
+        <script type="text/javascript">
+            require(["plotly"], function(Plotly) {
+                window.PLOTLYENV = window.PLOTLYENV || {};
+                window.PLOTLYENV.BASE_URL = "https://plot.ly";
+                Plotly.newPlot("f986e606-c92d-4e45-b3a7-830652322ea4", [{
+                    "type": "scatter",
+                    "x": [50.0, -11.998501863463092, -44.24143812129891, 33.23174097309077, 28.29219388162881, -46.81029861349807, -5.826055675895992, 49.60645620885318, -17.98207061457302, -40.976139897737966, 37.648162251394375,
+                        22.90727810056544, -48.6422830104544, 0.4381028331961802, 48.43201990403473, -23.682570075989705, -37.065805456500385, 41.47193550961305, 17.161761636759707, -49.7085526687719, 6.695364836292648,
+                        46.495178770178974, -29.0102644009342, -32.57199031121236, 44.64286785876565, 11.146088983462759, -49.992322636301814, 12.84723006895769, 43.826422079392664, -33.88128634849836, -27.565434983833477,
+                        47.11104326932606, -49.489125876690714, 18.796857396540148, 40.46776073670538, -38.21895750092171, -22.124951424928323, 48.8376083369628, -1.3141739605970344, -48.206883588357435, 24.45058926326274,
+                        36.472065954836054, -41.95499531620095, -16.33618237551559, 49.79538390318072, -7.562617886651521, -46.16578051095462, 29.719426026208435, 31.902236968694307, -45.030588014909206, -10.290253200305154,
+                        49.96929290288381, -13.692012960142405, -43.39794718221077, 34.520426965591625, 26.830210891243073, -47.39732038061886, -4.082337414842351, 49.35659770378989, -19.605871766081982, -39.94695414698353,
+                        38.778015916972485, 21.335830297335455, -49.01793590021719, 2.1898415123388517, 47.96694320155755, -25.211099807879734, -35.867126080565356, 42.42517097246913, 15.505586361729346, -49.866923246680926,
+                        8.427548498290399, 45.82220499223483, -30.419460977782485, -31.22268662313567, 45.40447952298313, 9.431257336492598, -49.93091787205155, 14.53259110879623, 42.956145012057824, -35.148966547771636, -
+                        26.086747387168835, 47.66904203323652, 3.2084638005564554, -49.20891238883005, 20.408865279297753, 39.41388006543684, -39.325165815755746, -20.540157052583425, 49.18321032260597, -3.064836575692824, -
+                        47.71227242801994, 25.963868161198466, 35.2511716074255, -42.88231809003643, -14.670228666908997, 49.92314872993017, -9.28989105573096, -45.46455772418766, 31.110154278739383, 30.533547960745093, -
+                        45.764427562944384, -8.569365184971907, 49.87720932856778, -15.368706377953972, -42.5011512439717, 35.76671207395955, 25.335272785198242, -47.926124782940875, -2.3336048845301876, 49.04611528516607, -
+                        21.20559134125687, -38.86870219620941, 39.860239170521105, 19.73817603758633, -49.33338084925513, 3.938890444441987, 47.44294947575027, -26.708663152161797, -34.62439169167798, 43.326296281516164,
+                        13.830365824848196, -49.9640430863891, 10.14938073827887, 45.09294853833945, -31.791293820932097, -29.835032612245783, 7.7048414281237125, -49.8081837660335, 16.200102001174347, 42.033105604057916, -
+                        36.373473837871295, -24.576017859085066, 48.16848968102109, 1.4580293311668644, -48.868256386900995, 21.99580528172951, 38.311587960452506, -40.38307166315811, -18.93013353634207, -47.15905705235853,
+                        33.98697881401563, -43.75696920362665, -12.986255752846743, 49.989593757623766, -11.0057536013386, -44.707491553845166, 32.46267043011977, 29.127355087892877, -46.44205540211418, -6.8379515564817055,
+                        49.72386238182227, -17.026522661394296, -41.552151826581465, 36.9690655062802, 23.809215771877607, -0.5820060249452218, 48.6753903135328, -22.779264430321604, -37.74270844491051, 5.683101300889533, -
+                        0.29419601215354235, -48.46757629318109
+                    ],
+                    "y": [0.0, 48.53901475135721, -23.29581835779288, -37.35841795228219, 41.22562025445251, 17.572590694463372, -49.65941074218823, 6.260950598681614, 46.65452964517496, -28.652329034146724, -32.90312871282431,
+                        44.44385908113016, 11.572739672647046, -49.99808062223535, 12.423342867971703, 44.03562052016341, -33.557801862769054, -27.929886592796905, 46.96247371596861, 5.3907134570416595, -49.5496931343569,
+                        18.390169959222742, 40.72351359335157, -37.935016108686284, -22.51697913452844, 48.74181675289433, -0.8761720309988936, -48.32130668302824, 24.06750356225014, 36.77034722940563, -41.715066752338416, -
+                        16.749614982908945, -7.129265036528048, -46.33225822269117, 29.365972501464455, 32.23835119144185, -44.8384491752844, -10.718582552064511, 49.98272648426943, -13.270130922434578, -43.61385886022035,
+                        34.202169594721454, 27.19886703555051, -47.25599586712668, -4.518820856689344, 49.424759085912584, -19.20210170305226, -40.208900963253456, 38.49996462846783, 21.731225069735842, -48.92965040825052,
+                        1.7520749943440213, 48.08875940486813, -24.831797767581065, -36.17098453336949, 42.191702780658446, 15.92149555591347, -49.83306654452823, 7.9953901159507765, 45.99575841631432, -30.070597838732688, -
+                        31.56367344817501, 45.2192696261594, 9.861133813218382, -49.95202292350969, 14.112843792041065, 43.17870362200708, -34.83603402686403, -26.459494854527403, 47.53500595959732, 3.645540551088881, -
+                        49.284646963420194, 20.00813658613938, 39.68194039889139, -39.053090019017255, -20.938797464205187, 49.10245803473442, -2.6274399050108257, -47.841444330878396, 25.58846626320264, 35.56051392518998, -
+                        42.655381967086406, -15.088486724437594, 49.896951410286775, -8.859059854659995, -45.645133563299765, 30.76598865935174, 30.8793026728797, -45.58620348587067, -9.000656773941836, 49.90597936885214, -
+                        14.951222684262591, -42.730288439324916, 35.459200502885544, 25.71199710689418, -47.799418310902084, -2.77114071986093, 49.12939979454919, -20.808027079567367, -39.142793726981644, 39.5942224185408,
+                        20.139939668132488, -49.260186564066025, 3.5019979432077957, 47.579437410169504, -26.337276680344974, -34.93912287706256, 43.1059619182729, 14.250844300952172, -49.94551319430903, 9.720009024388789,
+                        45.280491338628515, -31.451931412591914, -30.185449032089206, 45.93913807103103, 8.137415682042247, -49.84460996002159, 15.785010137513614, 42.26875101803168, -36.07147765175779, -24.956603345132493,
+                        48.049151721449476, 1.8958898864263707, -48.9590652548581, 21.601527541326096, 38.59162651652771, -40.12319564823109, 49.402787558673936, -4.375480536928138, -47.30281910363849, 27.077999063411518,
+                        34.30700221479127, -43.54330426357113, -13.408825520878567, 49.97873698353588, -10.577973232340387, -44.9019437219397, 32.1282154491735, 29.482325604474212, -46.2779649973533, -16.613950100213774,
+                        36.672677446508494, 24.1935455465475, -48.28412949947068, -1.0200568355456403, 48.77369565315532, -22.388394291749986, -38.02860802797583, 40.63984726329322, 18.523916703196356, -49.53021722656998,
+                        5.247619444433859, 47.011674359259175, -27.81040594059573, -33.66434605918201, 43.96727469753128, -49.9966125751228, 11.432689002384215, 44.50960696314319, -32.79463308595601, -49.67597366538302,
+                        49.99913447957307, -12.283893855967264
+                    ],
+                    "text": ["Porter Square Station", "MIT Stata Center at Vassar St / Main St", "One Kendall Square at Hampshire St / Portland St", "Lower Cambridgeport at Magazine St/Riverside Rd",
+                        "Inman Square at Vellucci Plaza / Hampshire St", "Central Square at Mass Ave / Essex St", "Binney St / Sixth St", "MIT at Mass Ave / Amherst St", "Lafayette Square at Mass Ave / Main St / Columbia St",
+                        "Lechmere Station at Cambridge St / First St", "359 Broadway - Broadway at Fayette Street", "Cambridge St - at Columbia St / Webster Ave", "Harvard University Gund Hall at Quincy St / Kirkland S",
+                        "Harvard Square at Brattle St / Eliot St", "Harvard University Radcliffe Quadrangle at Shepard St / Garden St", "Danehy Park", "Ames St at Main St", "Harvard Square at Mass Ave/ Dunster",
+                        "Harvard Law School at Mass Ave / Jarvis St", "EF - North Point Park", "Central Sq Post Office / Cambridge City Hall at Mass Ave / Pleasant St", "Kendall Street",
+                        "One Broadway / Kendall Sq at Main St / 3rd St", "Cambridge Main Library at Broadway / Trowbridge St", "Harvard Kennedy School at Bennett St / Eliot St",
+                        "Harvard University Housing - 115 Putnam Ave at Peabody Terrace", "Harvard University River Houses at DeWolfe St / Cowperthwaite St", "Harvard University / SEAS Cruft-Pierce Halls at 29 Oxford St",
+                        "Linear Park - Mass. Ave. at Cameron Ave. ", "CambridgeSide Galleria - CambridgeSide PL at Land Blvd", "Alewife Station at Russell Field", "Rindge Avenue - O'Neill Library", "Boylston / Mass Ave",
+                        "Hyde Square at Barbara St", "Tremont St / West St", "Packard's Corner - Comm. Ave. at Brighton Ave.", "Buswell St. at Park Dr.", "Charles Circle - Charles St. at Cambridge St.",
+                        "Yawkey Way at Boylston St.", "Beacon St / Mass Ave", "Allston Green District - Commonwealth Ave & Griggs St", "Washington St. at Rutland St.", "Prudential Center / Belvidere",
+                        "Rowes Wharf - Atlantic Ave", "The Esplanade - Beacon St. at Arlington St.", "Columbus Ave. at Mass. Ave.", "TD Garden - Causeway at Portal Park #1", "Aquarium Station - 200 Atlantic Ave.",
+                        "Union Square - Somerville", "Conway Park - Somerville Avenue", "Charlestown - Warren St at Chelsea St", "TD Garden - Causeway at Portal Park #2", "South Station - 700 Atlantic Ave.",
+                        "Lewis Wharf - Atlantic Ave.", "Back Bay / South End Station", "Agganis Arena - 925 Comm Ave.", "Somerville Hospital at Highland Ave / Crocker St", "Cambridge St. at Joy St.",
+                        "Mayor Martin J Walsh - 28 State St", "Boylston St. at Arlington St.", "Landmark Centre", "Tremont St. at Berkeley St.", "West Broadway at Dorchester St", "Christian Science Plaza",
+                        "Boston Medical Center -  East Concord at Harrison Ave", "Spaulding Rehabilitation Hospital - Charlestown Navy Yard", "Wilson Square", "Faneuil Hall - Union St. at North St.",
+                        "Ruggles Station / Columbus Ave.", "Somerville City Hall", "Hayes Square at Vine St.", "Teele Square at 239 Holland St", "South Boston Library - 646 East Broadway", "Davis Square",
+                        "Union Square - Brighton Ave. at Cambridge St.", "Brookline Village - Pearl Street @ MBTA", "Roxbury Crossing Station", "Post Office Square", "JFK / UMASS at MBTA Station", "Colleges of the Fenway",
+                        "Washington St. at Waltham St.", "BIDMC - Brookline at Burlington St", "Harvard Real Estate - Brighton Mills - 370 Western Ave", "Green St T", "Cross St. at Hanover St.",
+                        "Harvard University Housing - 111 Western Ave. at Soldiers Field Park ", "Harvard University Transportation Services - 175 North Harvard St", "Packard Ave / Powderhouse Blvd",
+                        "Stuart St. at Charles St.", "Powder House Circle - Nathan Tufts Park", "HMS / HSPH - Ave. Louis Pasteur at Longwood Ave.", "Chinatown Gate Plaza - Surface Rd. at Beach St.",
+                        "Boylston St / Washington St", "Ink Block", "State Street at Channel Center", "Brigham Cir / Huntington Ave", "B.U. Central - 725 Comm. Ave.", "Curtis Hall at South Street", "Tremont St / W Newton St",
+                        "JP Center - Centre Street at Myrtle Street", "Upham's Corner - Ramsey St at Dudley St", "Congress / Sleeper", "Longwood Ave / Binney St", "Fan Pier", "Seaport Hotel",
+                        "John F Fitzgerald - Surface Road at India Street", "Innovation Lab - 125 Western Ave. at Batten Way", "ID Building East", "Dana Park", "Dorchester Ave. at Gillette Park",
+                        "Northeastern U / North Parking Lot", "Seaport Square - Seaport Blvd. at Boston Wharf", "Boston Convention & Exhibition Center", "New Balance - 20 Guest St.", "Egleston Square at Columbus Ave",
+                        "ID Building West", "Washington St. at Lenox St.", "Charlestown - Main St at Austin St", "Magoun Square at Trum Field", "JFK Crossing at Harvard St. / Thorndike St.",
+                        "Andrew Station - Dorchester Ave at Humboldt Pl", "Jackson Square T at Centre St", "E. Cottage St at Columbia Rd", "Charles St at Beacon St", "Mass Ave at Newmarket Square", "Franklin St. / Arch St.",
+                        "Coolidge Corner - Beacon St @ Centre St", "Dudley Square", "Boylston at Fairfield", "Kenmore Sq / Comm Ave", "Boston Public Library - 700 Boylston St.", "New Balance Store - Boylston at Dartmouth",
+                        "Boylston St / Berkeley St", "Newbury St / Hereford St", "Washington Square at Washington St. / Beacon St.", "Summer St at Cutter St", "Beacon St at Washington / Kirkland",
+                        "UMass Boston Integrated Sciences Complex", "West Broadway at D Street", "Wentworth Institute of Technology", "Lawn on D", "Edwards Playground - Main Street & Eden Street", "Washington St at Brock St",
+                        "Brighton Center", "Heath St at South Huntington", "Bunker Hill Community College", "MIT Pacific St at Purrington St", "University Park", "MIT Vassar St", "Lesley University", "Mt Auburn",
+                        "Nashua Street at Red Auerbach Way", "Day Boulevard", "Kendall T", "Congress St and Northern Ave", "Purchase St at Pearl St", "Brookline Village - Station Street @ MBTA",
+                        "Broadway St at Mt Pleasant St", "Brian P. Murphy Staircase at Child Street", "TD Garden - West End Park", "Washington St at Melnea Cass Blvd", "Watermark Seaport",
+                        "Sidney Research Campus/ Erie Street at Waverly"
+                    ],
+                    "hoverinfo": "text",
+                    "mode": "markers",
+                    "opacity": 0.5,
+                    "marker": {
+                        "symbol": "dot",
+                        "size": 4,
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [50.0, -44.24143812129891],
+                    "y": [0.0, -23.29581835779288],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.482,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [50.0, -23.682570075989705],
+                    "y": [0.0, 44.03562052016341],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.242,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [50.0, -45.030588014909206],
+                    "y": [0.0, 21.731225069735842],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.623,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, 28.29219388162881],
+                    "y": [48.53901475135721, 41.22562025445251],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.284,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, -46.81029861349807],
+                    "y": [48.53901475135721, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.633,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, 49.60645620885318],
+                    "y": [48.53901475135721, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.581,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, -17.98207061457302],
+                    "y": [48.53901475135721, 46.65452964517496],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.59,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, -44.707491553845166],
+                    "y": [48.53901475135721, -22.388394291749986],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.141,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-11.998501863463092, 29.127355087892877],
+                    "y": [48.53901475135721, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.588,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.24143812129891, 50.0],
+                    "y": [-23.29581835779288, 0.0],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.639,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.24143812129891, -11.998501863463092],
+                    "y": [-23.29581835779288, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.28,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.24143812129891, 28.29219388162881],
+                    "y": [-23.29581835779288, 41.22562025445251],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.653,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.24143812129891, 49.60645620885318],
+                    "y": [-23.29581835779288, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.228,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.24143812129891, -37.065805456500385],
+                    "y": [-23.29581835779288, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.263,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [33.23174097309077, -11.998501863463092],
+                    "y": [-37.35841795228219, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.118,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [33.23174097309077, -46.81029861349807],
+                    "y": [-37.35841795228219, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.335,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [33.23174097309077, 49.60645620885318],
+                    "y": [-37.35841795228219, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.378,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [33.23174097309077, -49.992322636301814],
+                    "y": [-37.35841795228219, -0.8761720309988936],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.033,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, -11.998501863463092],
+                    "y": [41.22562025445251, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.122,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, -44.24143812129891],
+                    "y": [41.22562025445251, -23.29581835779288],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.134,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, -46.81029861349807],
+                    "y": [41.22562025445251, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.569,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, 49.60645620885318],
+                    "y": [41.22562025445251, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.179,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, -48.6422830104544],
+                    "y": [41.22562025445251, 11.572739672647046],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.19,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, -37.065805456500385],
+                    "y": [41.22562025445251, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.062,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [28.29219388162881, 6.695364836292648],
+                    "y": [41.22562025445251, -49.5496931343569],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.586,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, -11.998501863463092],
+                    "y": [17.572590694463372, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.269,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 33.23174097309077],
+                    "y": [17.572590694463372, -37.35841795228219],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.898,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 28.29219388162881],
+                    "y": [17.572590694463372, 41.22562025445251],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.379,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 49.60645620885318],
+                    "y": [17.572590694463372, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.203,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 37.648162251394375],
+                    "y": [17.572590694463372, -32.90312871282431],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.226,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 22.90727810056544],
+                    "y": [17.572590694463372, 44.44385908113016],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.184,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, -37.065805456500385],
+                    "y": [17.572590694463372, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.084,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 41.47193550961305],
+                    "y": [17.572590694463372, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.212,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, -32.57199031121236],
+                    "y": [17.572590694463372, -37.935016108686284],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.34,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 11.146088983462759],
+                    "y": [17.572590694463372, 48.74181675289433],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.436,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 20.408865279297753],
+                    "y": [17.572590694463372, -45.645133563299765],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.015,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, -47.926124782940875],
+                    "y": [17.572590694463372, 14.250844300952172],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.355,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, -44.707491553845166],
+                    "y": [17.572590694463372, -22.388394291749986],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.615,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.81029861349807, 29.127355087892877],
+                    "y": [17.572590694463372, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.183,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -11.998501863463092],
+                    "y": [6.260950598681614, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.61,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 33.23174097309077],
+                    "y": [6.260950598681614, -37.35841795228219],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.543,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 28.29219388162881],
+                    "y": [6.260950598681614, 41.22562025445251],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.03,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -46.81029861349807],
+                    "y": [6.260950598681614, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.939,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -17.98207061457302],
+                    "y": [6.260950598681614, 46.65452964517496],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.452,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -37.065805456500385],
+                    "y": [6.260950598681614, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.307,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 41.47193550961305],
+                    "y": [6.260950598681614, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.91,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 6.695364836292648],
+                    "y": [6.260950598681614, -49.5496931343569],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.313,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -29.0102644009342],
+                    "y": [6.260950598681614, 40.72351359335157],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.325,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -49.489125876690714],
+                    "y": [6.260950598681614, -7.129265036528048],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.767,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -48.206883588357435],
+                    "y": [6.260950598681614, -13.270130922434578],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 4.728,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 16.200102001174347],
+                    "y": [6.260950598681614, -47.30281910363849],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.784,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 42.033105604057916],
+                    "y": [6.260950598681614, 27.077999063411518],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.321,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -44.707491553845166],
+                    "y": [6.260950598681614, -22.388394291749986],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.971,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, 29.127355087892877],
+                    "y": [6.260950598681614, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.642,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.60645620885318, -41.552151826581465],
+                    "y": [6.260950598681614, -27.81040594059573],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.588,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-17.98207061457302, -11.998501863463092],
+                    "y": [46.65452964517496, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.689,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-17.98207061457302, -46.81029861349807],
+                    "y": [46.65452964517496, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.1,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-17.98207061457302, 49.60645620885318],
+                    "y": [46.65452964517496, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.57,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-17.98207061457302, -37.065805456500385],
+                    "y": [46.65452964517496, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.682,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-17.98207061457302, 41.47193550961305],
+                    "y": [46.65452964517496, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.011,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-40.976139897737966, 22.90727810056544],
+                    "y": [-28.652329034146724, 44.44385908113016],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.401,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [37.648162251394375, -11.998501863463092],
+                    "y": [-32.90312871282431, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.399,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [37.648162251394375, 6.695364836292648],
+                    "y": [-32.90312871282431, -49.5496931343569],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.837,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [37.648162251394375, -32.57199031121236],
+                    "y": [-32.90312871282431, -37.935016108686284],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.037,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [22.90727810056544, -11.998501863463092],
+                    "y": [44.44385908113016, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.5,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [22.90727810056544, -46.81029861349807],
+                    "y": [44.44385908113016, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.672,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [22.90727810056544, 49.60645620885318],
+                    "y": [44.44385908113016, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.154,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [22.90727810056544, -40.976139897737966],
+                    "y": [44.44385908113016, -28.652329034146724],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.316,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [22.90727810056544, -37.065805456500385],
+                    "y": [44.44385908113016, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.1,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-48.6422830104544, 48.43201990403473],
+                    "y": [11.572739672647046, 12.423342867971703],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.529,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-48.6422830104544, 41.47193550961305],
+                    "y": [11.572739672647046, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.03,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [0.4381028331961802, 48.43201990403473],
+                    "y": [-49.99808062223535, 12.423342867971703],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.4,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [0.4381028331961802, 11.146088983462759],
+                    "y": [-49.99808062223535, 48.74181675289433],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.028,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [48.43201990403473, -48.6422830104544],
+                    "y": [12.423342867971703, 11.572739672647046],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.537,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [48.43201990403473, 0.4381028331961802],
+                    "y": [12.423342867971703, -49.99808062223535],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.5,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [48.43201990403473, 41.47193550961305],
+                    "y": [12.423342867971703, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.12,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-23.682570075989705, 50.0],
+                    "y": [44.03562052016341, 0.0],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.138,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, -44.24143812129891],
+                    "y": [-33.557801862769054, -23.29581835779288],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.049,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, -46.81029861349807],
+                    "y": [-33.557801862769054, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.526,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, 49.60645620885318],
+                    "y": [-33.557801862769054, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.28,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, -17.98207061457302],
+                    "y": [-33.557801862769054, 46.65452964517496],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.426,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, -44.707491553845166],
+                    "y": [-33.557801862769054, -22.388394291749986],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.09,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-37.065805456500385, 29.127355087892877],
+                    "y": [-33.557801862769054, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.49,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 50.0],
+                    "y": [-27.929886592796905, 0.0],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.099,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 33.23174097309077],
+                    "y": [-27.929886592796905, -37.35841795228219],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.028,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, -46.81029861349807],
+                    "y": [-27.929886592796905, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.376,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 49.60645620885318],
+                    "y": [-27.929886592796905, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.743,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, -17.98207061457302],
+                    "y": [-27.929886592796905, 46.65452964517496],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.22,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 48.43201990403473],
+                    "y": [-27.929886592796905, 12.423342867971703],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.261,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 17.161761636759707],
+                    "y": [-27.929886592796905, 46.96247371596861],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.236,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 6.695364836292648],
+                    "y": [-27.929886592796905, -49.5496931343569],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.818,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, -32.57199031121236],
+                    "y": [-27.929886592796905, -37.935016108686284],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.267,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 11.146088983462759],
+                    "y": [-27.929886592796905, 48.74181675289433],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.099,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, -49.992322636301814],
+                    "y": [-27.929886592796905, -0.8761720309988936],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.301,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 20.408865279297753],
+                    "y": [-27.929886592796905, -45.645133563299765],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.232,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [41.47193550961305, 39.41388006543684],
+                    "y": [-27.929886592796905, 30.76598865935174],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.138,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [17.161761636759707, 0.4381028331961802],
+                    "y": [46.96247371596861, -49.99808062223535],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.146,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [17.161761636759707, 41.47193550961305],
+                    "y": [46.96247371596861, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.136,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [6.695364836292648, -11.998501863463092],
+                    "y": [-49.5496931343569, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.817,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [6.695364836292648, 28.29219388162881],
+                    "y": [-49.5496931343569, 41.22562025445251],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.387,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [6.695364836292648, 49.60645620885318],
+                    "y": [-49.5496931343569, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.867,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [6.695364836292648, 41.47193550961305],
+                    "y": [-49.5496931343569, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.0,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [46.495178770178974, -33.88128634849836],
+                    "y": [18.390169959222742, 36.77034722940563],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.077,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-29.0102644009342, 49.60645620885318],
+                    "y": [40.72351359335157, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.153,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-29.0102644009342, -40.976139897737966],
+                    "y": [40.72351359335157, -28.652329034146724],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.043,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-29.0102644009342, -33.88128634849836],
+                    "y": [40.72351359335157, 36.77034722940563],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.279,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-32.57199031121236, -46.81029861349807],
+                    "y": [-37.935016108686284, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.024,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-32.57199031121236, 41.47193550961305],
+                    "y": [-37.935016108686284, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.68,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [44.64286785876565, 11.146088983462759],
+                    "y": [-22.51697913452844, 48.74181675289433],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.454,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [44.64286785876565, 39.41388006543684],
+                    "y": [-22.51697913452844, 30.76598865935174],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.14,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, -46.81029861349807],
+                    "y": [48.74181675289433, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.645,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, -48.6422830104544],
+                    "y": [48.74181675289433, 11.572739672647046],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.402,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, 0.4381028331961802],
+                    "y": [48.74181675289433, -49.99808062223535],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.142,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, 41.47193550961305],
+                    "y": [48.74181675289433, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.304,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, 6.695364836292648],
+                    "y": [48.74181675289433, -49.5496931343569],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.035,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [11.146088983462759, 44.64286785876565],
+                    "y": [48.74181675289433, -22.51697913452844],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.007,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.992322636301814, 41.47193550961305],
+                    "y": [-0.8761720309988936, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.289,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.992322636301814, 44.64286785876565],
+                    "y": [-0.8761720309988936, -22.51697913452844],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.004,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [12.84723006895769, 41.47193550961305],
+                    "y": [-48.32130668302824, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.061,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [43.826422079392664, -30.419460977782485],
+                    "y": [24.06750356225014, 39.68194039889139],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 5.771,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-33.88128634849836, -29.0102644009342],
+                    "y": [36.77034722940563, 40.72351359335157],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.614,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.489125876690714, 49.60645620885318],
+                    "y": [-7.129265036528048, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.19,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.489125876690714, -1.3141739605970344],
+                    "y": [-7.129265036528048, 49.98272648426943],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.342,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [40.46776073670538, -19.605871766081982],
+                    "y": [29.365972501464455, 45.99575841631432],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.034,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [40.46776073670538, 42.033105604057916],
+                    "y": [29.365972501464455, 27.077999063411518],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.052,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-38.21895750092171, 49.92314872993017],
+                    "y": [32.23835119144185, -2.77114071986093],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.049,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-38.21895750092171, 16.200102001174347],
+                    "y": [32.23835119144185, -47.30281910363849],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.045,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-22.124951424928323, 26.830210891243073],
+                    "y": [-44.8384491752844, 42.191702780658446],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.113,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [48.8376083369628, -19.605871766081982],
+                    "y": [-10.718582552064511, 45.99575841631432],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.294,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-1.3141739605970344, -49.489125876690714],
+                    "y": [49.98272648426943, -7.129265036528048],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.021,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-48.206883588357435, -11.998501863463092],
+                    "y": [-13.270130922434578, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.062,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-48.206883588357435, 49.60645620885318],
+                    "y": [-13.270130922434578, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 4.834,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [36.472065954836054, -41.95499531620095],
+                    "y": [34.202169594721454, 27.19886703555051],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.183,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [36.472065954836054, -13.692012960142405],
+                    "y": [34.202169594721454, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.329,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [36.472065954836054, 34.520426965591625],
+                    "y": [34.202169594721454, -36.17098453336949],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.669,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-41.95499531620095, 36.472065954836054],
+                    "y": [27.19886703555051, 34.202169594721454],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.14,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-16.33618237551559, -46.16578051095462],
+                    "y": [-47.25599586712668, -19.20210170305226],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.255,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-16.33618237551559, 49.96929290288381],
+                    "y": [-47.25599586712668, 1.7520749943440213],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.445,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-16.33618237551559, -43.39794718221077],
+                    "y": [-47.25599586712668, -24.831797767581065],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.994,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-16.33618237551559, -49.20891238883005],
+                    "y": [-47.25599586712668, -8.859059854659995],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.858,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.79538390318072, 49.60645620885318],
+                    "y": [-4.518820856689344, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.177,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.16578051095462, -10.290253200305154],
+                    "y": [-19.20210170305226, -48.92965040825052],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.165,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.16578051095462, -13.692012960142405],
+                    "y": [-19.20210170305226, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.525,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.16578051095462, 47.96694320155755],
+                    "y": [-19.20210170305226, 14.112843792041065],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.249,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.16578051095462, -45.764427562944384],
+                    "y": [-19.20210170305226, 20.139939668132488],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.763,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-46.16578051095462, -42.5011512439717],
+                    "y": [-19.20210170305226, -26.337276680344974],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.251,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.719426026208435, -13.692012960142405],
+                    "y": [-40.208900963253456, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.614,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.719426026208435, -49.20891238883005],
+                    "y": [-40.208900963253456, -8.859059854659995],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.082,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-45.030588014909206, 50.0],
+                    "y": [21.731225069735842, 0.0],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.023,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-10.290253200305154, -46.16578051095462],
+                    "y": [-48.92965040825052, -19.20210170305226],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.142,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-10.290253200305154, 49.96929290288381],
+                    "y": [-48.92965040825052, 1.7520749943440213],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.362,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-10.290253200305154, 47.96694320155755],
+                    "y": [-48.92965040825052, 14.112843792041065],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.15,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-10.290253200305154, -49.20891238883005],
+                    "y": [-48.92965040825052, -8.859059854659995],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.128,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.96929290288381, -10.290253200305154],
+                    "y": [1.7520749943440213, -48.92965040825052],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.015,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.96929290288381, -13.692012960142405],
+                    "y": [1.7520749943440213, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.42,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 36.472065954836054],
+                    "y": [48.08875940486813, 34.202169594721454],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.42,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -16.33618237551559],
+                    "y": [48.08875940486813, -47.25599586712668],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.458,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -46.16578051095462],
+                    "y": [48.08875940486813, -19.20210170305226],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.656,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 29.719426026208435],
+                    "y": [48.08875940486813, -40.208900963253456],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.709,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -10.290253200305154],
+                    "y": [48.08875940486813, -48.92965040825052],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.093,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 49.96929290288381],
+                    "y": [48.08875940486813, 1.7520749943440213],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.105,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -43.39794718221077],
+                    "y": [48.08875940486813, -24.831797767581065],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.347,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 34.520426965591625],
+                    "y": [48.08875940486813, -36.17098453336949],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.091,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 49.35659770378989],
+                    "y": [48.08875940486813, 7.9953901159507765],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.19,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -19.605871766081982],
+                    "y": [48.08875940486813, 45.99575841631432],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.113,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 21.335830297335455],
+                    "y": [48.08875940486813, 45.2192696261594],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.174,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 45.82220499223483],
+                    "y": [48.08875940486813, 20.00813658613938],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.296,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -35.148966547771636],
+                    "y": [48.08875940486813, 35.56051392518998],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.067,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -49.20891238883005],
+                    "y": [48.08875940486813, -8.859059854659995],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.2,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -20.540157052583425],
+                    "y": [48.08875940486813, -45.58620348587067],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.232,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 35.2511716074255],
+                    "y": [48.08875940486813, 35.459200502885544],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.211,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -42.88231809003643],
+                    "y": [48.08875940486813, 25.71199710689418],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.787,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -45.764427562944384],
+                    "y": [48.08875940486813, 20.139939668132488],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.313,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -15.368706377953972],
+                    "y": [48.08875940486813, 47.579437410169504],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.252,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, 25.335272785198242],
+                    "y": [48.08875940486813, 43.1059619182729],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.13,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -38.86870219620941],
+                    "y": [48.08875940486813, -31.451931412591914],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.474,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-13.692012960142405, -49.33338084925513],
+                    "y": [48.08875940486813, 8.137415682042247],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.487,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-43.39794718221077, -16.33618237551559],
+                    "y": [-24.831797767581065, -47.25599586712668],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.745,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-43.39794718221077, -13.692012960142405],
+                    "y": [-24.831797767581065, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.702,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-43.39794718221077, -42.5011512439717],
+                    "y": [-24.831797767581065, -26.337276680344974],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.094,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [34.520426965591625, -11.998501863463092],
+                    "y": [-36.17098453336949, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.006,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [34.520426965591625, 36.472065954836054],
+                    "y": [-36.17098453336949, 34.202169594721454],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.411,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [34.520426965591625, -13.692012960142405],
+                    "y": [-36.17098453336949, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.123,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [34.520426965591625, 2.1898415123388517],
+                    "y": [-36.17098453336949, -49.95202292350969],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.269,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [34.520426965591625, -45.46455772418766],
+                    "y": [-36.17098453336949, -20.808027079567367],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.343,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [26.830210891243073, -22.124951424928323],
+                    "y": [42.191702780658446, -44.8384491752844],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.023,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [26.830210891243073, 49.92314872993017],
+                    "y": [42.191702780658446, -2.77114071986093],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.521,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [26.830210891243073, 16.200102001174347],
+                    "y": [42.191702780658446, -47.30281910363849],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.376,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.35659770378989, -13.692012960142405],
+                    "y": [7.9953901159507765, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.643,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.35659770378989, -4.082337414842351],
+                    "y": [7.9953901159507765, -49.83306654452823],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.2,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-19.605871766081982, -13.692012960142405],
+                    "y": [45.99575841631432, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.844,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-39.94695414698353, -3.064836575692824],
+                    "y": [-30.070597838732688, 49.90597936885214],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.246,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-39.94695414698353, -8.569365184971907],
+                    "y": [-30.070597838732688, -49.260186564066025],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.14,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [38.778015916972485, -13.692012960142405],
+                    "y": [-31.56367344817501, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.217,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [38.778015916972485, -47.71227242801994],
+                    "y": [-31.56367344817501, -14.951222684262591],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.145,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [2.1898415123388517, 34.520426965591625],
+                    "y": [-49.95202292350969, -36.17098453336949],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.189,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [47.96694320155755, 49.96929290288381],
+                    "y": [14.112843792041065, 1.7520749943440213],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.302,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [8.427548498290399, -30.419460977782485],
+                    "y": [-49.284646963420194, 39.68194039889139],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 4.237,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-30.419460977782485, 43.826422079392664],
+                    "y": [39.68194039889139, 24.06750356225014],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 5.379,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-30.419460977782485, 8.427548498290399],
+                    "y": [39.68194039889139, -49.284646963420194],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.308,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-30.419460977782485, -39.325165815755746],
+                    "y": [39.68194039889139, 30.8793026728797],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.757,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [9.431257336492598, 42.42517097246913],
+                    "y": [49.10245803473442, -26.459494854527403],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.06,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.93091787205155, -46.16578051095462],
+                    "y": [-2.6274399050108257, -19.20210170305226],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.563,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.20891238883005, -16.33618237551559],
+                    "y": [-8.859059854659995, -47.25599586712668],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.137,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.20891238883005, -10.290253200305154],
+                    "y": [-8.859059854659995, -48.92965040825052],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.234,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.20891238883005, -13.692012960142405],
+                    "y": [-8.859059854659995, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.065,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.20891238883005, -45.764427562944384],
+                    "y": [-8.859059854659995, 20.139939668132488],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.082,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [20.408865279297753, 41.47193550961305],
+                    "y": [-45.645133563299765, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.34,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [20.408865279297753, 44.64286785876565],
+                    "y": [-45.645133563299765, -22.51697913452844],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.076,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [39.41388006543684, 41.47193550961305],
+                    "y": [30.76598865935174, -27.929886592796905],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.4,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-39.325165815755746, -30.419460977782485],
+                    "y": [30.8793026728797, 39.68194039889139],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.67,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-20.540157052583425, -13.692012960142405],
+                    "y": [-45.58620348587067, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.047,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-3.064836575692824, -39.94695414698353],
+                    "y": [49.90597936885214, -30.070597838732688],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.199,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-47.71227242801994, 38.778015916972485],
+                    "y": [-14.951222684262591, -31.56367344817501],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.165,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [25.963868161198466, -13.692012960142405],
+                    "y": [-42.730288439324916, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.571,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [35.2511716074255, -13.692012960142405],
+                    "y": [35.459200502885544, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.214,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-42.88231809003643, -13.692012960142405],
+                    "y": [25.71199710689418, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.337,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.92314872993017, -38.21895750092171],
+                    "y": [-2.77114071986093, 32.23835119144185],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.494,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [49.92314872993017, 26.830210891243073],
+                    "y": [-2.77114071986093, 42.191702780658446],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.997,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-45.46455772418766, 34.520426965591625],
+                    "y": [-20.808027079567367, -36.17098453336949],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.957,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-45.764427562944384, -46.16578051095462],
+                    "y": [20.139939668132488, -19.20210170305226],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.274,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-45.764427562944384, 49.96929290288381],
+                    "y": [20.139939668132488, 1.7520749943440213],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.292,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-45.764427562944384, -13.692012960142405],
+                    "y": [20.139939668132488, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.432,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-8.569365184971907, -39.94695414698353],
+                    "y": [-49.260186564066025, -30.070597838732688],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.167,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-15.368706377953972, -13.692012960142405],
+                    "y": [47.579437410169504, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.151,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-42.5011512439717, -13.692012960142405],
+                    "y": [-26.337276680344974, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.344,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [25.335272785198242, -13.692012960142405],
+                    "y": [43.1059619182729, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.131,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-47.926124782940875, -46.81029861349807],
+                    "y": [14.250844300952172, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.164,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-21.20559134125687, -49.20891238883005],
+                    "y": [45.280491338628515, -8.859059854659995],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.2,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-38.86870219620941, -13.692012960142405],
+                    "y": [-31.451931412591914, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.333,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.33338084925513, -13.692012960142405],
+                    "y": [8.137415682042247, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.544,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-29.835032612245783, -8.569365184971907],
+                    "y": [-40.12319564823109, -49.260186564066025],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.394,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-49.8081837660335, -13.692012960142405],
+                    "y": [-4.375480536928138, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.121,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [16.200102001174347, -11.998501863463092],
+                    "y": [-47.30281910363849, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.246,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [16.200102001174347, 49.60645620885318],
+                    "y": [-47.30281910363849, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.793,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [16.200102001174347, 26.830210891243073],
+                    "y": [-47.30281910363849, 42.191702780658446],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.118,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [42.033105604057916, 40.46776073670538],
+                    "y": [27.077999063411518, 29.365972501464455],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.134,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [42.033105604057916, -13.692012960142405],
+                    "y": [27.077999063411518, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.08,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-24.576017859085066, -13.692012960142405],
+                    "y": [-43.54330426357113, 48.08875940486813],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.466,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, -11.998501863463092],
+                    "y": [-22.388394291749986, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.92,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, -46.81029861349807],
+                    "y": [-22.388394291749986, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.534,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, 49.60645620885318],
+                    "y": [-22.388394291749986, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.335,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, -37.065805456500385],
+                    "y": [-22.388394291749986, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.22,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, 29.127355087892877],
+                    "y": [-22.388394291749986, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.251,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-44.707491553845166, -41.552151826581465],
+                    "y": [-22.388394291749986, -27.81040594059573],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.662,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [32.46267043011977, 29.127355087892877],
+                    "y": [-38.02860802797583, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.066,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.127355087892877, -11.998501863463092],
+                    "y": [40.63984726329322, 48.53901475135721],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 4.297,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.127355087892877, -46.81029861349807],
+                    "y": [40.63984726329322, 17.572590694463372],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.068,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.127355087892877, 49.60645620885318],
+                    "y": [40.63984726329322, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 3.108,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.127355087892877, -37.065805456500385],
+                    "y": [40.63984726329322, -33.557801862769054],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 2.101,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [29.127355087892877, -41.552151826581465],
+                    "y": [40.63984726329322, -27.81040594059573],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.921,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-41.552151826581465, 49.60645620885318],
+                    "y": [-27.81040594059573, 6.260950598681614],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.815,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-41.552151826581465, -44.707491553845166],
+                    "y": [-27.81040594059573, -22.388394291749986],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.555,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }, {
+                    "type": "scatter",
+                    "x": [-41.552151826581465, 29.127355087892877],
+                    "y": [-27.81040594059573, 40.63984726329322],
+                    "mode": "lines",
+                    "opacity": 0.1,
+                    "hoverinfo": "none",
+                    "line": {
+                        "width": 1.463,
+                        "shape": "spline",
+                        "color": "orange"
+                    }
+                }], {
+                    "title": "Links with frequency > 1000",
+                    "font": {
+                        "size": 12
+                    },
+                    "showlegend": false,
+                    "hovermode": "closea",
+                    "autosize": false,
+                    "width": 700,
+                    "height": 750,
+                    "xaxis": {
+                        "showline": false,
+                        "zeroline": false,
+                        "showgrid": false,
+                        "showticklabels": false,
+                        "title": ""
+                    },
+                    "yaxis": {
+                        "showline": false,
+                        "zeroline": false,
+                        "showgrid": false,
+                        "showticklabels": false,
+                        "title": ""
+                    },
+                    "margin": {
+                        "l": 40,
+                        "r": 40,
+                        "b": 85,
+                        "t": 100
+                    }
+                })
+            });
+        </script>
+
+    </center>
+
+
+</body>
+
+</html>
