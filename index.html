@@ -94,7 +94,13 @@
 
         }
     </script>
-
+    <script>
+    function rm_jumbotron() {
+      var jumbo;
+      jumbo = document.getElementById("intro");
+      jumbo.style.display = "none";
+    }
+    </script>
     <script>
         var k = 0;
         var l = 0;
@@ -205,10 +211,23 @@
         </div>
         <h1 style="margin-bottom:20px; margin-top:200px; font-size:100px">Bicycle Data Analysis</h1>
         <h1 style="margin-bottom:20px; font-size:40px"> <i>IBTD_</i> Integrating Bicycle Travel Demand to a Land-use and Transport Model in Greater Boston Area (GBA)</h1>
-        <h3 style="margin-bottom: 250px;">Spring 2017 - Marc-Edouard Schultheiss</h3>
+
+        <div class="col-md-6">
+            <h3 style="margin-bottom: 120px"> Spring 2017 - Marc-Edouard Schultheiss</h3>
+        </div>
+        <div class="col-md-6">
+            <h2 style="margin-bottom: 120px" align="right">
+              <a href="https://meschultheiss.github.io/IBTD_assignment/#data" class="btn btn-danger btn-md" role="button">Back to Assignment</a>
+            </a></h2>
+        </div>
 
 
-
+<div class="col-md-12">
+        <div style="margin-bottom: 220px" class="jumbotron" id="intro">
+          <h3>Hello,</h3>
+          <p class="lead">Welcome to my dashboard. <br> It should work for most updated browsers, but still can have problems. Please refresh if a plot does not show up, or visualize the preview by clicking on the images button close to the title. <br> The Scripts are available under the button "notebook".</p>
+          <h2  align="center"><a class="btn btn-warning btn-lg" href="#maps" role="button" onclick="rm_jumbotron()">Got it :)</a></h2>
+        </div></div>
 
 
 
@@ -249,7 +268,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-              <h2 align="right">
+                <h2 align="right">
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/HubwayMap.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
             </a></h2>
             </div>
@@ -258,9 +277,9 @@
                 <div class="jumbotron">
                     <p>
                         The following map reprsent all the stations of the Hubway network in Boston Urban Area. The size of the dots are plotted proportionaly to the amount of mouvement at the station over the past two years, with a minimum threshold for vizualisation purpose.
-                        The links are shaded according to the occurence of trips between two stations (origin and destination). No threshold, so if no link, the occurence is very low compared to the most used OD pairs. We can notice that the most
-                        used stations are aggregated in two specific areas, wich are Cambridge (between MIT and Harvard) and Downtown Boston (Central). In those areas, the intensity of the links is the highest as well, and the length of the trips
-                        is quite low.
+                        The links are shaded according to the occurence of trips between two stations (origin and destination). No threshold, so if no link, the occurence is very low compared to the most used OD pairs. We can notice that the most used
+                        stations are aggregated in two specific areas, wich are Cambridge (between MIT and Harvard) and Downtown Boston (Central). In those areas, the intensity of the links is the highest as well, and the length of the trips is quite
+                        low.
                     </p>
                 </div>
             </div>
@@ -314,7 +333,7 @@
 
             </div>
             <div class="col-md-6">
-              <h2 align="right">
+                <h2 align="right">
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/ecototem.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
             </a></h2>
             </div>
@@ -332,13 +351,6 @@
                 </div>
             </center>
         </div>
-
-
-
-
-
-
-
 
 
 
@@ -412,7 +424,7 @@
 
             </div>
             <div class="col-md-4">
-              <h2 align="right">
+                <h2 align="right">
                 <div class="btn-group btn-group-xs" role="group">
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/hubayDataAnalysis_1.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
             </a>
@@ -420,57 +432,51 @@
             </a>
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/chord_chart.ipynb" class="btn btn-warning btn-xs" role="button">Notebook3</a>
             </a></h2>
-            </div>  </div>
-
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <p>
-                        The Stats of HW....
-                    </p>
-                </div>
             </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <p>
+                    The Stats of HW....
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <iframe width=100% height=600px src="./web/plots/chord_chart1000.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <iframe width=100% height=600px src="./web/plots/stats2.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <h3>Other stats</h3>
+        <div class="col-md-6">
+            <iframe width=100% height=600px src="./web/plots/stats1.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <iframe width=100% height=600px src="./web/plots/stats3.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <h5>Trip Duration Distribution, xaxis in seconds</h5>
+            <iframe width=100% height=600px src="./web/plots/stats4.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <h5>User age Distribution, xaxis in year</h5>
+            <iframe width=100% height=600px src="./web/plots/stats6.html" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- PART weather -->
+        <div class="col-md-12">
             <div class="col-md-6">
-                <iframe width=100% height=600px src="./web/plots/chord_chart1000.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-                <iframe width=100% height=600px src="./web/plots/stats2.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h3>Other stats</h3>
-            <div class="col-md-6">
-                <iframe width=100% height=600px src="./web/plots/stats1.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-                <iframe width=100% height=600px src="./web/plots/stats3.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-              <h5>Trip Duration Distribution, xaxis in seconds</h5>
-                <iframe width=100% height=600px src="./web/plots/stats4.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-              <h5>User age Distribution, xaxis in year</h5>
-                <iframe width=100% height=600px src="./web/plots/stats6.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- PART weather -->
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <h2 style="margin-left:1px;" name="maps"> <strong> Weather vs. Trip correlation</strong>
+                <h2 style="margin-left:1px;" name="maps"> <strong> Weather vs. Trip correlation</strong>
                       <div class="btn-group btn-group-xs" role="group">
                           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather1">image 1</button>
                           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather2">image 2</button>
@@ -479,67 +485,67 @@
                       </div>
                     </h2>
 
-                    <div id="weather1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather1.png" class="img-responsive">
-                                </div>
+                <div id="weather1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather1.png" class="img-responsive">
                             </div>
                         </div>
                     </div>
-                    <div id="weather2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather2.png" class="img-responsive">
-                                </div>
+                </div>
+                <div id="weather2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather2.png" class="img-responsive">
                             </div>
                         </div>
                     </div>
-                    <div id="weather3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather3.png" class="img-responsive">
-                                </div>
+                </div>
+                <div id="weather3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather3.png" class="img-responsive">
                             </div>
                         </div>
                     </div>
-                    <div id="weather4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather4.png" class="img-responsive">
-                                </div>
+                </div>
+                <div id="weather4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather4.png" class="img-responsive">
                             </div>
                         </div>
                     </div>
-
                 </div>
 
+            </div>
 
-                <div class="col-md-6">
-                  <h2 align="right">
+
+            <div class="col-md-6">
+                <h2 align="right">
                   <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/ExploreWeather.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
                 </a></h2>
+            </div>
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <p>
+                        The Weather data...
+                    </p>
                 </div>
+            </div>
+            <center>
                 <div class="col-md-12">
-                    <div class="jumbotron">
-                        <p>
-                            The Weather data...
-                        </p>
-                    </div>
+                    <iframe width=100% height=550px src="web/plots/exploreHW2016.html" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <center>
-                    <div class="col-md-12">
-                        <iframe width=100% height=550px src="web/plots/exploreHW2016.html" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </center>
+            </center>
 
 
-                <div class="col-md-6">
-                    <h2 style="margin-left:1px;" name="maps">
+            <div class="col-md-6">
+                <h2 style="margin-left:1px;" name="maps">
                           <div class="btn-group btn-group-xs" role="group">
                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather5">image 5</button>
                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather6">image 6</button>
@@ -548,68 +554,65 @@
                           </div>
                         </h2>
 
-                    <div id="weather5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather5.png" class="img-responsive">
-                                </div>
+                <div id="weather5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather5.png" class="img-responsive">
                             </div>
                         </div>
                     </div>
-                    <div id="weather6" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather6.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="weather7" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather7.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="weather8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="web/imgs/weather8.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-md-6">
-                  <h2 align="right">
+                <div id="weather6" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather6.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="weather7" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather7.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="weather8" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/weather8.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h2 align="right">
                   <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/exploreHW2016.ipynb" class="btn btn-warning btn-xs" role="button">Notebook2</a>
                 </a></h2>
+            </div>
+
+            <center>
+                <div class="col-md-6">
+                    <iframe width=100% height=600px src="web/plots/ExploreWeather.html" frameborder="0" allowfullscreen></iframe>
                 </div>
-
-                <center>
-                    <div class="col-md-6">
-                        <iframe width=100% height=600px src="web/plots/ExploreWeather.html" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </center>
+            </center>
 
 
-                    <div class="col-md-6">
-                      <h5>Correlation Matrix, weather attributes vs trip duration and number of trips</h5>
-                        <iframe width=100% height=400px src="web/plots/stats5.html" frameborder="0" allowfullscreen></iframe>
-                    </div>
-
-
-
+            <div class="col-md-6">
+                <h5>Correlation Matrix, weather attributes vs trip duration and number of trips</h5>
+                <iframe width=100% height=400px src="web/plots/stats5.html" frameborder="0" allowfullscreen></iframe>
             </div>
 
 
 
+        </div>
 
 
 
@@ -620,12 +623,10 @@
 
 
 
-
-
-                        <!-- PART PCA -->
-                        <div class="col-md-12">
-                            <div class="col-md-9">
-                                <h2 style="margin-left:1px;" name="maps"> <strong> Principal Component Analysis (PCA)</strong>
+        <!-- PART PCA -->
+        <div class="col-md-12">
+            <div class="col-md-9">
+                <h2 style="margin-left:1px;" name="maps"> <strong> Principal Component Analysis (PCA)</strong>
                                   <div class="btn-group btn-group-xs" role="group">
                                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#PCA1">image 1</button>
                                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#PCA2">image 2</button>
@@ -633,39 +634,39 @@
                                   </div>
                                 </h2>
 
-                                <div id="PCA1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <img src="web/imgs/PCA1.png" class="img-responsive">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="PCA2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <img src="web/imgs/PCA2.png" class="img-responsive">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="PCA3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <img src="web/imgs/PCA3.png" class="img-responsive">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                <div id="PCA1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/PCA1.png" class="img-responsive">
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="PCA2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/PCA2.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="PCA3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/PCA3.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
-                            <div class="col-md-3">
-                              <h2 align="right">
+            <div class="col-md-3">
+                <h2 align="right">
                                 <div class="btn-group btn-group-xs" role="group">
                               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/PCA1.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
                             </a>
@@ -673,33 +674,34 @@
                             </a>
                               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/PCA3.ipynb" class="btn btn-warning btn-xs" role="button">Notebook3</a>
                             </a></h2>
-                          </div></div>
-                            <div class="col-md-12">
-                                <div class="jumbotron">
-                                    <p>
-                                        Principal component Analysis (PCA) We ran a supervised Principal Component Analysis on the Hubway dataset and the corresponding weather data. The PCA aims at finding if the space dimension of all the explaining variables can be reduced. It was supervised
-                                        because we define the class to the algorithm at the beginning. Firstly, we ran a PCA on 4 stations of the Hubway network. Two stations were located in the suburbs, and two others were among the most used stations in Cambridge and
-                                        Boston. And the explaining variables were the trip duration, gender and weather information. The expectations (or hypothesis) were to find two distinct use of the two pairs of stations (in-bound and out-bound). The results rejected
-                                        the hypothesis since all the four station seem to have the same behavior considering this set of explaining variables. Furthermore, by computing the explained variance, we realized that the space dimension was not reducible without
-                                        loosing a lot of information (Principal Components with an explained variation between 20 and 10% each). We conducted the same procedure with the classes "gender", which is shown on the figures below, and "user type", but each time obtained the same result. Before
-                                        any comment, let precise that the chosen features might not completely explain the station use, nor the gender type use, and yields a high heuristic bias because of the poor amount of features. Nevertheless, we can stand that people
-                                        outbound are not less/more sensitive to the weather to bike, neither for gender. Correlations with weather, gender, trip duration with other modes, etc Bicycle use evolution
-                                    </p>
-                                </div>
-                            </div>
-                            <h3>Supervised PCA with gender as classes</h3>
-                            <center>
-                                <div class="col-md-12">
-                                    <iframe width=100% height=550px src="web/plots/PCA2.html" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                                    <div class="col-md-12">
-                                        <iframe width=100% height=550px src="web/plots/PCA1.html" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                        <div class="col-md-12">
-                                          <h5>Scatter of the clusters, PC1 vs PC2</h5>
-                                            <iframe width=100% height=550px src="web/plots/PCA3.html" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                            </center>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <p>
+                    Principal component Analysis (PCA) We ran a supervised Principal Component Analysis on the Hubway dataset and the corresponding weather data. The PCA aims at finding if the space dimension of all the explaining variables can be reduced. It was supervised
+                    because we define the class to the algorithm at the beginning. Firstly, we ran a PCA on 4 stations of the Hubway network. Two stations were located in the suburbs, and two others were among the most used stations in Cambridge and Boston.
+                    And the explaining variables were the trip duration, gender and weather information. The expectations (or hypothesis) were to find two distinct use of the two pairs of stations (in-bound and out-bound). The results rejected the hypothesis
+                    since all the four station seem to have the same behavior considering this set of explaining variables. Furthermore, by computing the explained variance, we realized that the space dimension was not reducible without loosing a lot
+                    of information (Principal Components with an explained variation between 20 and 10% each). We conducted the same procedure with the classes "gender", which is shown on the figures below, and "user type", but each time obtained the
+                    same result. Before any comment, let precise that the chosen features might not completely explain the station use, nor the gender type use, and yields a high heuristic bias because of the poor amount of features. Nevertheless, we
+                    can stand that people outbound are not less/more sensitive to the weather to bike, neither for gender. Correlations with weather, gender, trip duration with other modes, etc Bicycle use evolution
+                </p>
+            </div>
+        </div>
+        <h3>Supervised PCA with gender as classes</h3>
+        <center>
+            <div class="col-md-12">
+                <iframe width=100% height=550px src="web/plots/PCA2.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-12">
+                <iframe width=100% height=550px src="web/plots/PCA1.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-12">
+                <h5>Scatter of the clusters, PC1 vs PC2</h5>
+                <iframe width=100% height=550px src="web/plots/PCA3.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </center>
 
 
 
