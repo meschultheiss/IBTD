@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>PCA2</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="custom.css">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
+
+<div class="output_html rendered_html output_subarea ">
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+</div>
+
+
+
+<div id="02b77d2f-bb0f-4cb0-8212-0120d8e19fdb" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("02b77d2f-bb0f-4cb0-8212-0120d8e19fdb", [{"type": "bar", "x": ["PC 1", "PC 2", "PC 3", "PC 4", "PC 5", "PC 6"], "y": [22.70540818169745, 18.461422191990984, 17.65205024958325, 15.946059164807954, 14.549844080951441, 10.685216130968922], "showlegend": false, "opacity": 0.7, "marker": {"color": "rgb(255, 127, 14)", "line": {"color": "rgb(255, 127, 14)", "width": 1.5}}}, {"type": "scatter", "x": ["PC 1", "PC 2", "PC 3", "PC 4", "PC 5", "PC 6"], "y": [22.70540818169745, 41.166830373688434, 58.81888062327168, 74.76493978807963, 89.31478386903107, 100.0], "name": "cumulative explained variance"}], {"yaxis": {"title": "Explained variance in percent"}, "title": "Explained variance by different principal components"})});</script>
+</div>
+
+</body>
+</html>

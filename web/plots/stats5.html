@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>hubwayDataAnalysis_2</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="custom.css">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
+
+<div class="output_html rendered_html output_subarea ">
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <style  type="text/css" >
+
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col0 {
+
+                background-color:  #fff6e5;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col1 {
+
+                background-color:  #ffa500;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col2 {
+
+                background-color:  #ffa500;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col3 {
+
+                background-color:  #ffa500;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col0 {
+
+                background-color:  #ffa602;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col1 {
+
+                background-color:  #fff6e5;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col2 {
+
+                background-color:  #ffbd44;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col3 {
+
+                background-color:  #ffbe46;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col0 {
+
+                background-color:  #ffaa0e;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col1 {
+
+                background-color:  #ffc04d;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col2 {
+
+                background-color:  #fff6e5;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col3 {
+
+                background-color:  #ffc55c;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col0 {
+
+                background-color:  #ffa500;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col1 {
+
+                background-color:  #ffbd45;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col2 {
+
+                background-color:  #ffc252;
+
+            }
+
+            #T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col3 {
+
+                background-color:  #fff6e5;
+
+            }
+
+        </style>
+
+        <table id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9da" None>
+
+
+        <thead>
+
+            <tr>
+
+
+                <th class="blank level0" >
+
+
+
+
+                <th class="col_heading level0 col0" colspan=1>
+                  temp_avg
+
+
+
+                <th class="col_heading level0 col1" colspan=1>
+                  wind_avg
+
+
+
+                <th class="col_heading level0 col2" colspan=1>
+                  bikeTrip
+
+
+
+                <th class="col_heading level0 col3" colspan=1>
+                  tripDuration
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+
+            <tr>
+
+
+                <th id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9da"
+                 class="row_heading level0 row0" rowspan=1>
+                    temp_avg
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col0"
+                 class="data row0 col0" >
+                    1
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col1"
+                 class="data row0 col1" >
+                    -0.209273
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col2"
+                 class="data row0 col2" >
+                    -0.140054
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow0_col3"
+                 class="data row0 col3" >
+                    -0.219723
+
+
+            </tr>
+
+            <tr>
+
+
+                <th id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9da"
+                 class="row_heading level0 row1" rowspan=1>
+                    wind_avg
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col0"
+                 class="data row1 col0" >
+                    -0.209273
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col1"
+                 class="data row1 col1" >
+                    1
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col2"
+                 class="data row1 col2" >
+                    0.197652
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow1_col3"
+                 class="data row1 col3" >
+                    0.156544
+
+
+            </tr>
+
+            <tr>
+
+
+                <th id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9da"
+                 class="row_heading level0 row2" rowspan=1>
+                    bikeTrip
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col0"
+                 class="data row2 col0" >
+                    -0.140054
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col1"
+                 class="data row2 col1" >
+                    0.197652
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col2"
+                 class="data row2 col2" >
+                    1
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow2_col3"
+                 class="data row2 col3" >
+                    0.268429
+
+
+            </tr>
+
+            <tr>
+
+
+                <th id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9da"
+                 class="row_heading level0 row3" rowspan=1>
+                    tripDuration
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col0"
+                 class="data row3 col0" >
+                    -0.219723
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col1"
+                 class="data row3 col1" >
+                    0.156544
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col2"
+                 class="data row3 col2" >
+                    0.268429
+
+
+
+                <td id="T_776f8cf8_1d8d_11e7_b0ec_7831c1cbc9darow3_col3"
+                 class="data row3 col3" >
+                    1
+
+
+            </tr>
+
+        </tbody>
+        </table>
+
+</body>
+</html>
