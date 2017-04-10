@@ -95,11 +95,11 @@
         }
     </script>
     <script>
-    function rm_jumbotron() {
-      var jumbo;
-      jumbo = document.getElementById("intro");
-      jumbo.style.display = "none";
-    }
+        function rm_jumbotron() {
+            var jumbo;
+            jumbo = document.getElementById("intro");
+            jumbo.style.display = "none";
+        }
     </script>
     <script>
         var k = 0;
@@ -222,14 +222,16 @@
         </div>
 
 
-<div class="col-md-12">
-        <div style="margin-bottom: 220px" class="jumbotron" id="intro">
-          <h3>Hello,</h3>
-          <p class="lead">Welcome to my dashboard. <br> It should work for the most updated browsers (faster on Chrome), but still can have problems. Please refresh if a plot does not show up, or visualize the preview by clicking on the images button close to the title.
-            <br>Most figures are interactive, you can zoom-in, come back to original layout with double-click, slide the axes, etc.
-            <br> The Python scripts are available under the button "notebook".</p>
-          <h2  align="center"><a class="btn btn-warning btn-lg" href="#maps" role="button" onclick="rm_jumbotron()">Got it :)</a></h2>
-        </div></div>
+        <div class="col-md-12">
+            <div style="margin-bottom: 220px" class="jumbotron" id="intro">
+                <h3>Hello,</h3>
+                <p class="lead">Welcome to my dashboard. <br> It should work for the most updated browsers (faster on Chrome), but still can have problems. Please refresh if a plot does not show up, or visualize the preview by clicking on the images button close to the
+                    title.
+                    <br>Most figures are interactive, you can zoom-in, come back to original layout with double-click, slide the axes, etc.
+                    <br> The Python scripts are available under the button "notebook".</p>
+                <h2 align="center"><a class="btn btn-warning btn-lg" href="#maps" role="button" onclick="rm_jumbotron()">Got it :)</a></h2>
+            </div>
+        </div>
 
 
 
@@ -247,6 +249,9 @@
                   <div class="btn-group btn-group-xs" role="group">
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#map1">image 1</button>
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#map2">image 2</button>
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat3">image 3</button>
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#circle">image 4</button>
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#circle2">image 5</button>
                   </div>
                 </h2>
 
@@ -268,11 +273,43 @@
                         </div>
                     </div>
                 </div>
+                <div id="circle" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/circleHW.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="circle2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="web/imgs/circleHW2.png" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div id="stat3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="web/imgs/stat3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="col-md-6">
-                <h2 align="right">
-              <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/HubwayMap.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
-            </a></h2>
+              <h2 align="right">
+                <div class="btn-group btn-group-xs" role="group">
+              <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/HubwayMap.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
+            </a>
+              <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/chord_chart.ipynb" class="btn btn-warning btn-xs" role="button">Notebook2</a>
+            </a>
+                </div>
+              </h2>
             </div>
 
             <div class="col-md-12">
@@ -285,19 +322,26 @@
                     </p>
                 </div>
             </div>
-            <center>
-                <div class="col-md-12">
-                    <iframe width=100% height=600px src="web/plots/HubwayMap.html" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </center>
-        </div>
+        <center>
+            <div class="col-md-12">
+                <iframe width=100% height=600px src="web/plots/HubwayMap.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </center>
 
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <iframe width=100% height=600px src="./web/plots/chord_chart1000.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <iframe width=100% height=600px src="./web/plots/stats3.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
 
         <!-- PART ECOTOTEM -->
         <div class="col-md-12">
             <div class="col-md-6">
-                <h2 style="margin-left:1px;" name="maps"> <strong> Eco-totem count</strong>
+                <h2 style="margin-left:1px;"  > <strong> Eco-totem count</strong>
                   <div class="btn-group btn-group-xs" role="group">
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#ecototem1">image 1</button>
                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#ecototem2">image 2</button>
@@ -358,44 +402,16 @@
 
 
 
-
-
-
-
-
-        <!-- PART 1 : HUBWAY DATA -->
-        <h1 style="margin-bottom:20px; margin-top:40px;"> <i class="fa fa-bicycle fa-1x" aria-hidden="true"></i> Hubway bicycle data </h1>
-        <!-- PART 1.1 : General stats-->
+<!-- PART 1.1 : General stats-->
         <div class="col-md-12">
             <div class="col-md-8">
-                <h2 style="margin-left:1px;" name="stats"> <strong> General statistics</strong>
+                <h2 style="margin-left:1px;" name="stats"> <strong> Hubway bicycle data : general statistics</strong>
                   <div class="btn-group btn-group-xs" role="group">
-                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#circle">image 1</button>
-                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#circle2">image 2</button>
-                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat1">image 3</button>
-                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat2">image 4</button>
-                              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat3">image 5</button>
-                  </div>
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat1">image 1</button>
+                          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#stat2">image 2</button>
                 </h2>
 
-                <div id="circle" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="web/imgs/circleHW.png" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="circle2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="web/imgs/circleHW2.png" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div id="stat1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -414,15 +430,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="stat3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <img src="web/imgs/stat3.png" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
             <div class="col-md-4">
@@ -431,8 +438,6 @@
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/hubayDataAnalysis_1.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
             </a>
               <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/hubayDataAnalysis_2.ipynb" class="btn btn-warning btn-xs" role="button">Notebook2</a>
-            </a>
-              <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/chord_chart.ipynb" class="btn btn-warning btn-xs" role="button">Notebook3</a>
             </a></h2>
             </div>
         </div>
@@ -440,22 +445,15 @@
         <div class="col-md-12">
             <div class="jumbotron">
                 <p>
-                    The Stats of HW....
+                    Text
                 </p>
             </div>
         </div>
         <div class="col-md-6">
-            <iframe width=100% height=600px src="./web/plots/chord_chart1000.html" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
             <iframe width=100% height=600px src="./web/plots/stats2.html" frameborder="0" allowfullscreen></iframe>
         </div>
-        <h3>Other stats</h3>
         <div class="col-md-6">
             <iframe width=100% height=600px src="./web/plots/stats1.html" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
-            <iframe width=100% height=600px src="./web/plots/stats3.html" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-md-6">
             <h5>Trip Duration Distribution, xaxis in seconds</h5>
@@ -478,7 +476,7 @@
         <!-- PART weather -->
         <div class="col-md-12">
             <div class="col-md-6">
-                <h2 style="margin-left:1px;" name="maps"> <strong> Weather vs. Trip correlation</strong>
+                <h2 style="margin-left:1px;"  > <strong> Weather vs. Trip correlation</strong>
                       <div class="btn-group btn-group-xs" role="group">
                           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather1">image 1</button>
                           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather2">image 2</button>
@@ -547,7 +545,7 @@
 
 
             <div class="col-md-6">
-                <h2 style="margin-left:1px;" name="maps">
+                <h2 style="margin-left:1px;"  >
                           <div class="btn-group btn-group-xs" role="group">
                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather5">image 5</button>
                               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#weather6">image 6</button>
@@ -601,16 +599,16 @@
             </div>
 
             <center>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <iframe width=100% height=600px src="web/plots/ExploreWeather.html" frameborder="0" allowfullscreen></iframe>
                 </div>
             </center>
 
 
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <h5>Correlation Matrix, weather attributes vs trip duration and number of trips</h5>
                 <iframe width=100% height=400px src="web/plots/stats5.html" frameborder="0" allowfullscreen></iframe>
-            </div>
+            </div> -->
 
 
 
@@ -628,7 +626,7 @@
         <!-- PART PCA -->
         <div class="col-md-12">
             <div class="col-md-9">
-                <h2 style="margin-left:1px;" name="maps"> <strong> Principal Component Analysis (PCA)</strong>
+                <h2 style="margin-left:1px;"  > <strong> Principal Component Analysis (PCA)</strong>
                                   <div class="btn-group btn-group-xs" role="group">
                                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#PCA1">image 1</button>
                                       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#PCA2">image 2</button>
@@ -705,6 +703,52 @@
             </div>
         </center>
 
+
+
+
+
+
+
+                <!-- PART GOOGLE MAP -->
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <h2 style="margin-left:1px;"  > <strong> Exploration of Google Map information</strong>
+                          <div class="btn-group btn-group-xs" role="group">
+                              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#googlemap1">image 1</button>
+                          </div>
+                        </h2>
+
+                        <div id="googlemap1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img src="web/imgs/googlemap1.png" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <h2 align="right">
+                      <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/tripDuration.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
+                    </a></h2>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="jumbotron">
+                            <p>
+                                Txt...
+                            </p>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="col-md-12">
+                            <iframe width=100% height=550px src="web/plots/tripDuration.html" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </center>
+                </div>
 
 
 
