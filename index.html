@@ -387,7 +387,13 @@
             <div class="col-md-12">
                 <div class="jumbotron">
                     <p>
-                        The Ecototem data...
+                      The ecototem data come from a cyclist counter located on broadway, Cambridge. It returns every 15 minutes how many people passed by the counter, in both directions (Eastbound is toward Boston downtown, Westbound is toward Cambridge/Somerville).
+
+In addition to the seasonal variability of  bicycle use, the intersting plots are when you display the time serie one a week basis and on a daily basis.
+
+On the week basis, we can see the high variability in the amount of cyclists between the weekend and the working days, meaning that a lot of rides are commuting trips.
+
+On the day basis, by selecting the "all trips" button we can see the total amount of cyclists as well as the separated count between East and West. We see That is the morning peak, a large majority of cyclists go to Boston, and the opposite in the evening.
                     </p>
                 </div>
             </div>
@@ -442,13 +448,6 @@
             </div>
         </div>
 
-        <div class="col-md-12">
-            <div class="jumbotron">
-                <p>
-                    Text
-                </p>
-            </div>
-        </div>
         <div class="col-md-6">
             <iframe width=100% height=600px src="./web/plots/stats2.html" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -529,13 +528,6 @@
                 <h2 align="right">
                   <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/ExploreWeather.ipynb" class="btn btn-warning btn-xs" role="button">Notebook1</a>
                 </a></h2>
-            </div>
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <p>
-                        The Weather data...
-                    </p>
-                </div>
             </div>
             <center>
                 <div class="col-md-12">
@@ -684,8 +676,8 @@
                     And the explaining variables were the trip duration, gender and weather information. The expectations (or hypothesis) were to find two distinct use of the two pairs of stations (in-bound and out-bound). The results rejected the hypothesis
                     since all the four station seem to have the same behavior considering this set of explaining variables. Furthermore, by computing the explained variance, we realized that the space dimension was not reducible without loosing a lot
                     of information (Principal Components with an explained variation between 20 and 10% each). We conducted the same procedure with the classes "gender", which is shown on the figures below, and "user type", but each time obtained the
-                    same result. Before any comment, let precise that the chosen features might not completely explain the station use, nor the gender type use, and yields a high heuristic bias because of the poor amount of features. Nevertheless, we
-                    can stand that people outbound are not less/more sensitive to the weather to bike, neither for gender. Correlations with weather, gender, trip duration with other modes, etc Bicycle use evolution
+                    same result.Let's precise that the chosen features might not completely explain the station use, nor the gender type use, and yields a high heuristic bias because of the poor amount of features. Nevertheless, we
+                    can stand that people outbound are not less/more sensitive to the weather to bike, neither for gender. Correlations with weather, gender, trip duration with other modes, etc
                 </p>
             </div>
         </div>
@@ -696,10 +688,6 @@
             </div>
             <div class="col-md-12">
                 <iframe width=100% height=550px src="web/plots/PCA1.html" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-12">
-                <h5>Scatter of the clusters, PC1 vs PC2</h5>
-                <iframe width=100% height=550px src="web/plots/PCA3.html" frameborder="0" allowfullscreen></iframe>
             </div>
         </center>
 
@@ -732,14 +720,14 @@
                     </div>
                     <div class="col-md-3">
                         <h2 align="right">
-                      <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/tripDuration.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
+                      <a href="http://nbviewer.jupyter.org/github/meschultheiss/IBTD_notebook/blob/master/ScrappingGoogleMaps.ipynb" class="btn btn-warning btn-xs" role="button">Notebook</a>
                     </a></h2>
                     </div>
 
                     <div class="col-md-12">
                         <div class="jumbotron">
                             <p>
-                                Txt...
+                                From the Google Maps API Distance Matrix, I requested the trip duration and trip distances to populate OD matrix between all my ID stations in order to be able to compare the actual speed of cyclists while using the Hubway bikes and the speed that googlemaps would returns. It ends-up with a different distribution of speed as well as a much lower average speed. For the record, most of the trips are less than three km, in urban areas. So an overestimation of 5 km/h over 3 km is approximatively a 6 minutes difference. Further investigation could be made with these data, for instance measuring the diference between car trip duration and bicycle trip duration during peak hours.
                             </p>
                         </div>
                     </div>
